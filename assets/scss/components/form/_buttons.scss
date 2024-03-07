@@ -1,0 +1,56 @@
+.btn {
+  --btn-bg: var(--primary);
+  --btn-bg-hover: var(--primary-hover);
+  --btn-color: #fff;
+  --btn-color-hover: #fff;
+  --btn-border-color: #ccc;
+  --btn-border-color-hover: #ccc;
+  --btn-border-style: solid;
+  --btn-padding: 10px 20px;
+  --btn-font-size: 14px;
+  --btn-rounded: 5px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  user-select: none;
+  padding: var(--btn-padding);
+  font-size: var(--btn-font-size);
+  font-weight: 600;
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+  border-radius: var(--btn-rounded);
+  border: 1px var(--btn-border-style) var(--btn-border-color);
+  transition: background 1s, color 0.5s, border 0.8s;
+  &:hover,
+  &:focus {
+    background-color: var(--btn-bg-hover);
+    color: var(--btn-color-hover);
+  }
+  &:disabled {
+    background-color: var(--btn-bg-hover);
+    color: var(--btn-color-hover);
+  }
+}
+
+.btn-success {
+  --btn-bg: var(--success);
+  --btn-bg-hover: var(--success-hover);
+  --btn-color: #fff;
+  --btn-color-hover: #fff;
+}
+
+.btn-block {
+  width: 100%;
+  display: block;
+}
+
+.btn-sm {
+  --btn-padding: 5px 15px;
+  --btn-font-size: 12px;
+}
+
+.btn-lg {
+  --btn-padding: 15px 25px;
+  --btn-font-size: 16px;
+}

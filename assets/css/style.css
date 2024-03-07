@@ -1,0 +1,266 @@
+:root {
+  --primary: #2f91f3;
+  --primary-subtle: #d4e8fc;
+  --primary-hover: #0b80f4;
+  --success: #07f371;
+  --success-subtle: #cbf9e0;
+  --success-hover: #0ae46c;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+.card {
+  --card-head-space: 10px 20px;
+  --card-body-space: var(--card-head-space);
+  --card-foot-space: var(--card-head-space);
+  --card-title-size: 20px;
+  --card-title-color: #000;
+  --card-subtitle-size: 16px;
+  --card-subtitle-color: #000;
+  --card-desc-size: 14px;
+  --card-desc-color: #666;
+  --card-rounded: 5px;
+  --card-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  --card-border: #ccc;
+  --card-bg: #fff;
+  --card-color: #000;
+  background-color: var(--card-bg);
+  color: var(--card-color);
+  border-radius: var(--card-rounded);
+  border: 1px solid var(--card-border);
+  -webkit-box-shadow: var(--card-shadow);
+          box-shadow: var(--card-shadow);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.card .card-head {
+  width: 100%;
+  padding: var(--card-head-space);
+}
+.card .card-body {
+  width: 100%;
+  padding: var(--card-body-space);
+}
+.card .card-foot {
+  width: 100%;
+  padding: var(--card-foot-space);
+}
+.card .card-title {
+  font-size: var(--card-title-size);
+  color: var(--card-title-color);
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.card .card-subtitle {
+  font-size: var(--card-subtitle-size);
+  color: var(--card-subtitle-color);
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.card .card-desc {
+  color: var(--card-desc-color);
+  font-size: var(--card-desc-size);
+  font-weight: normal;
+}
+.card .card-image {
+  height: 200px;
+  min-height: 200px;
+}
+.card .card-image .image {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: top;
+     object-position: top;
+  border-radius: var(--card-rounded) var(--card-rounded) 0 0;
+}
+.card .card-badge {
+  background-color: var(--primary);
+  color: #fff;
+  border-radius: 50px;
+  padding: 2px 4px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.card-blog {
+  --card-head-space: 10px 20px;
+  --card-body-space: var(--card-head-space);
+  --card-foot-space: var(--card-head-space);
+  --card-title-size: 20px;
+  --card-title-color: #000;
+  --card-subtitle-size: 16px;
+  --card-subtitle-color: #000;
+  --card-desc-size: 14px;
+  --card-desc-color: #666;
+  --card-rounded: 5px;
+  --card-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.8);
+  --card-border: #ccc;
+  --card-bg: #fff;
+  --card-color: #000;
+}
+
+.btn {
+  --btn-bg: var(--primary);
+  --btn-bg-hover: var(--primary-hover);
+  --btn-color: #fff;
+  --btn-color-hover: #fff;
+  --btn-border-color: #ccc;
+  --btn-border-color-hover: #ccc;
+  --btn-border-style: solid;
+  --btn-padding: 10px 20px;
+  --btn-font-size: 14px;
+  --btn-rounded: 5px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: var(--btn-padding);
+  font-size: var(--btn-font-size);
+  font-weight: 600;
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+  border-radius: var(--btn-rounded);
+  border: 1px var(--btn-border-style) var(--btn-border-color);
+  -webkit-transition: background 1s, color 0.5s, border 0.8s;
+  transition: background 1s, color 0.5s, border 0.8s;
+}
+.btn:hover, .btn:focus {
+  background-color: var(--btn-bg-hover);
+  color: var(--btn-color-hover);
+}
+.btn:disabled {
+  background-color: var(--btn-bg-hover);
+  color: var(--btn-color-hover);
+}
+
+.btn-success {
+  --btn-bg: var(--success);
+  --btn-bg-hover: var(--success-hover);
+  --btn-color: #fff;
+  --btn-color-hover: #fff;
+}
+
+.btn-block {
+  width: 100%;
+  display: block;
+}
+
+.btn-sm {
+  --btn-padding: 5px 15px;
+  --btn-font-size: 12px;
+}
+
+.btn-lg {
+  --btn-padding: 15px 25px;
+  --btn-font-size: 16px;
+}
+/*# sourceMappingURL=style.css.map */
