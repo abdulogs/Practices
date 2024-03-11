@@ -40,6 +40,13 @@
   --btn-color-hover: #fff;
 }
 
+.btn-danger {
+  --btn-bg: var(--danger);
+  --btn-bg-hover: var(--danger-hover);
+  --btn-color: #fff;
+  --btn-color-hover: #fff;
+}
+
 .btn-block {
   width: 100%;
   display: block;

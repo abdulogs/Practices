@@ -1,0 +1,103 @@
+.alert {
+  --alert-bg: var(--body);
+  --alert-icon-bg: var(--light);
+  --alert-icon-color: var(--text);
+  --alert-border: var(--border);
+  --alert-shadow: var(--shadow);
+  --alert-dir: center;
+  --alert-title-size: 16px;
+  --alert-title-space: 10px;
+  --alert-title-color: var(--text);
+  --alert-subtitle-size: 14px;
+  --alert-subtitle-space: 10px;
+  --alert-subtitle-color: var(--text);
+  --alert-desc-size: 12px;
+  --alert-desc-space: 0;
+  --alert-desc-color: var(--muted);
+  --alert-rounded: var(--rounded);
+  display: flex;
+  align-items: var(--alert-dir);
+  border-left: 5px solid var(--alert-border);
+  padding: 10px;
+  border-radius: var(--alert-rounded);
+  box-shadow: var(--alert-shadow);
+  .alert-icon {
+    padding: 10px;
+    border-radius: 50px;
+    font-size: 20px;
+    background-color: var(--alert-icon-bg);
+    color: var(--alert-icon-color);
+  }
+  .alert-body {
+    padding: 0 10px;
+    .alert-title {
+      font-size: var(--alert-title-size);
+      color: var(--alert-title-color);
+      margin-bottom: var(--alert-title-space);
+      font-weight: 600;
+    }
+    .alert-subtitle {
+      font-size: var(--alert-subtitle-size);
+      color: var(--alert-subtitle-color);
+      margin-bottom: var(--alert-subtitle-space);
+      font-weight: 500;
+    }
+    .alert-desc {
+      font-size: var(--alert-desc-size);
+      color: var(--alert-desc-color);
+      margin-bottom: var(--alert-desc-space);
+    }
+  }
+  .btn-close {
+    background-color: transparent;
+    color: var(--muted);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-left: auto;
+  }
+}
+
+.alert-primary {
+  --alert-icon-bg: var(--primary);
+  --alert-icon-color: white;
+  --alert-border: var(--primary);
+}
+
+.alert-secondary {
+  --alert-icon-bg: var(--secondary);
+  --alert-icon-color: white;
+  --alert-border: var(--secondary);
+}
+
+.alert-success {
+  --alert-icon-bg: var(--success);
+  --alert-icon-color: white;
+  --alert-border: var(--success);
+}
+
+.alert-info {
+  --alert-icon-bg: var(--info);
+  --alert-icon-color: white;
+  --alert-border: var(--info);
+}
+.alert-danger {
+  --alert-icon-bg: var(--danger);
+  --alert-icon-color: white;
+  --alert-border: var(--danger);
+}
+.alert-warning {
+  --alert-icon-bg: var(--warning);
+  --alert-icon-color: white;
+  --alert-border: var(--warning);
+}
+.alert-light {
+  --alert-icon-bg: var(--light);
+  --alert-icon-color: white;
+  --alert-border: var(--light);
+}
+.alert-dark {
+  --alert-icon-bg: var(--dark);
+  --alert-icon-color: white;
+  --alert-border: var(--dark);
+}

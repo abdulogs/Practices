@@ -85,3 +85,16 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}

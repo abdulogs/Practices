@@ -1,18 +1,28 @@
 .card {
-  --card-head-space: 10px 20px;
-  --card-body-space: var(--card-head-space);
-  --card-foot-space: var(--card-head-space);
-  --card-title-size: 20px;
-  --card-title-color: #000;
-  --card-subtitle-size: 16px;
-  --card-subtitle-color: #000;
-  --card-desc-size: 14px;
-  --card-desc-color: #666;
-  --card-rounded: 5px;
-  --card-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
-  --card-border: #ccc;
-  --card-bg: #fff;
-  --card-color: #000;
+  --card-border: var(--border);
+  --card-shadow: var(--shadow);
+  --card-head-space: 1rem 1.5rem;
+  --card-body-space: 1rem 1.5rem;
+  --card-foot-space: 1rem 1.5rem;
+  --card-body-height: 100%;
+  --card-rounded: var(--rounded);
+  --card-bg: var(--body);
+  --card-title-color: var(--text);
+  --card-title-size: 1.4rem;
+  --card-title-space: 15px;
+  --card-subtitle-color: var(--text);
+  --card-subtitle-size: 1.1rem;
+  --card-subtitle-space: 15px;
+  --card-desc-color: var(--muted);
+  --card-desc-size: 1rem;
+  --card-desc-space: 15px;
+  --card-badge-size: 1rem;
+  --card-badge-space: 15px;
+  --card-title-clamp: 2;
+  --card-subtitle-clamp: 2;
+  --card-image-width: 100%;
+  --card-image-height: 150px;
+  --card-image-rounded: var(--rounded);
   background-color: var(--card-bg);
   color: var(--card-color);
   border-radius: var(--card-rounded);
@@ -20,12 +30,14 @@
   box-shadow: var(--card-shadow);
   display: flex;
   flex-direction: column;
+  height: 100%;
   .card-head {
     width: 100%;
     padding: var(--card-head-space);
   }
   .card-body {
     width: 100%;
+    height: 100%;
     padding: var(--card-body-space);
   }
   .card-foot {
@@ -52,13 +64,15 @@
   .card-image {
     height: 200px;
     min-height: 200px;
+    width: 100%;
+    border-radius: var(--card-rounded) var(--card-rounded) 0 0;
 
     .image {
       height: 100%;
       width: 100%;
-      object-fit: contain;
+      object-fit: cover;
       object-position: top;
-      border-radius: var(--card-rounded) var(--card-rounded) 0 0;
+      border-radius: inherit;
     }
   }
   .card-badge {
@@ -70,6 +84,5 @@
     text-transform: uppercase;
   }
   .card-btn {
-    
   }
 }
