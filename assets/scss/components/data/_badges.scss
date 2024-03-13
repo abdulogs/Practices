@@ -1,0 +1,92 @@
+.badge {
+  --badge-bg: var(--body);
+  --badge-bg-hover: var(--light);
+  --badge-border-style: solid;
+  --badge-border-width: 1px;
+  --badge-border-color: var(--border);
+  --badge-border-hover: var(--border);
+  --badge-color: var(--text);
+  --badge-color-hover: var(--text);
+  --badge-wgt: 400;
+  --badge-size: 12px;
+  --badge-padding: 2px 5px;
+  --badge-rounded: 50px;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: var(--badge-wgt);
+  color: var(--badge-color);
+  font-size: var(--badge-size);
+  padding: var(--badge-padding);
+  border-radius: var(--badge-rounded);
+  border: var(--badge-border-width) var(--badge-border-style)
+    var(--badge-border);
+  &:hover {
+    border-color: var(--badge-border-hover);
+    color: var(--badge-color-hover);
+    background-color: var(--badge-bg-hover);
+  }
+}
+
+.badge-primary {
+  --badge-bg: var(--primary-subtle);
+  --badge-border: var(--primary);
+  --badge-color: var(--primary);
+  --badge-bg-hover: inherit;
+  --badge-border-hover: inherit;
+  --badge-color-hover: inherit;
+}
+
+.badge-info {
+  --badge-bg: var(--info-subtle);
+  --badge-border: var(--info);
+  --badge-color: var(--info);
+  --badge-bg-hover: inherit;
+  --badge-border-hover: inherit;
+  --badge-color-hover: inherit;
+}
+
+.badge-success {
+  --badge-bg: var(--success-subtle);
+  --badge-border: var(--success);
+  --badge-color: var(--success);
+  --badge-bg-hover: inherit;
+  --badge-border-hover: inherit;
+  --badge-color-hover: inherit;
+}
+
+.badge-warning {
+  --badge-bg: var(--warning-subtle);
+  --badge-border: var(--warning);
+  --badge-color: var(--warning);
+  --badge-bg-hover: inherit;
+  --badge-border-hover: inherit;
+  --badge-color-hover: inherit;
+}
+
+.badge-danger {
+  --badge-bg: var(--danger-subtle);
+  --badge-border: var(--danger);
+  --badge-color: var(--danger);
+  --badge-bg-hover: inherit;
+  --badge-border-hover: inherit;
+  --badge-color-hover: inherit;
+}
+
+.badge-light {
+  --badge-bg: var(--light-subtle);
+  --badge-border: var(--light);
+  --badge-color: var(--text);
+  --badge-bg-hover: inherit;
+  --badge-border-hover: inherit;
+  --badge-color-hover: inherit;
+}
+
+.badge-dark {
+  --badge-bg: var(--dark-subtle);
+  --badge-border: var(--dark);
+  --badge-color: var(--dark);
+  --badge-bg-hover: inherit;
+  --badge-border-hover: inherit;
+  --badge-color-hover: inherit;
+}

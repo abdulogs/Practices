@@ -1,0 +1,16 @@
+.collapsible {
+    --collapse-head-color:;
+    --collapse-head-bg:;
+    --collapse-head-border:;
+    --collapse-head-size:;
+  .collapse-item {
+    .collapse-body {
+      display: none;
+    }
+    &.active {
+      .collapse-body {
+        display: block;
+      }
+    }
+  }
+}
