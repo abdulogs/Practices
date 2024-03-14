@@ -539,10 +539,79 @@ body {
   --badge-color-hover: inherit;
 }
 
+.collapsible .collapse-item {
+  border: 1px solid var(--border);
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.collapsible .collapse-item .collapse-head {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  background-color: transparent;
+  color: var(--text);
+  font-size: 14px;
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  text-align: left;
+}
+.collapsible .collapse-item .collapse-head::after {
+  font-size: 20px;
+  font-family: "icons";
+  right: 0;
+  float: right;
+  content: "\ebc0";
+}
 .collapsible .collapse-item .collapse-body {
   display: none;
+  padding: 20px;
+}
+.collapsible .collapse-item.active .collapse-head {
+  color: var(--primary);
+  font-weight: 600;
+}
+.collapsible .collapse-item.active .collapse-head::after {
+  float: right;
+  content: "\eb8b";
 }
 .collapsible .collapse-item.active .collapse-body {
+  display: block;
+}
+
+.tabs {
+  margin-bottom: 20px;
+}
+.tabs .tabs-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: inherit;
+}
+.tabs .tabs-items .tab-item {
+  border: none;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  margin-right: 5px;
+  padding: 5px 10px;
+  background-color: transparent;
+}
+.tabs .tabs-items .tab-item.active {
+  font-weight: 600;
+  color: var(--primary);
+}
+.tabs .tab-panes .tab-pane {
+  display: none;
+}
+.tabs .tab-panes .tab-pane.active {
   display: block;
 }
 
@@ -7278,4 +7347,10 @@ body {
 
 .show {
   display: block;
+}
+
+.boxed {
+  margin-left: auto;
+  margin-right: auto;
+  width: clamp(280px, 80vw, 1600px);
 }

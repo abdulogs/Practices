@@ -1,0 +1,31 @@
+.tabs {
+  margin-bottom: 20px;
+  .tabs-items {
+    display: flex;
+    align-items: center;
+    margin-bottom: inherit;
+    .tab-item {
+      border: none;
+      outline: none;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 400;
+      margin-right: 5px;
+      padding: 5px 10px;
+      background-color: transparent;
+      &.active {
+        font-weight: 600;
+        color: var(--primary);
+      }
+    }
+  }
+  .tab-panes {
+    .tab-pane {
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+  }
+}
