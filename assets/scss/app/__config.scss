@@ -1,4 +1,5 @@
 $config: (
+  prefix: null,
   colors: (
     light: (
       primary: #ff2a2a,
@@ -12,6 +13,7 @@ $config: (
       light: #fff5f5,
       body: #ffffff,
       text: #000000,
+      overlay: rgb(230, 231, 234, 0.5),
     ),
     dark: (
       primary: #ff2a2a,
@@ -25,6 +27,8 @@ $config: (
       light: #fff5f5,
       body: #ffffff,
       text: #000000,
+      overlay: rgb(230, 231, 234, 0.5),
+
     ),
   ),
   assets: (

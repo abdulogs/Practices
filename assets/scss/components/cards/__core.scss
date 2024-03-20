@@ -1,28 +1,31 @@
 .card {
-  --card-border: var(--border);
-  --card-shadow: var(--shadow);
-  --card-head-space: 1rem 1.5rem;
-  --card-body-space: 1rem 1.5rem;
-  --card-foot-space: 1rem 1.5rem;
-  --card-body-height: 100%;
-  --card-rounded: var(--rounded);
-  --card-bg: var(--body);
-  --card-title-color: var(--text);
-  --card-title-size: 1.4rem;
-  --card-title-space: 15px;
-  --card-subtitle-color: var(--text);
-  --card-subtitle-size: 1.1rem;
-  --card-subtitle-space: 15px;
-  --card-desc-color: var(--muted);
-  --card-desc-size: 1rem;
-  --card-desc-space: 15px;
-  --card-badge-size: 1rem;
-  --card-badge-space: 15px;
-  --card-title-clamp: 2;
-  --card-subtitle-clamp: 2;
-  --card-image-width: 100%;
-  --card-image-height: 150px;
-  --card-image-rounded: var(--rounded);
+  @include vars(
+    (
+      card-bg: var(--body),
+      card-border: var(--border),
+      card-shadow: var(--shadow),
+      card-head-space: 1rem 1.5rem,
+      card-body-space: 1rem 1.5rem,
+      card-foot-space: 1rem 1.5rem,
+      card-body-height: 100%,
+      card-rounded: var(--rounded),
+      card-title-color: var(--text),
+      card-title-size: 1.4rem,
+      card-title-space: 15px,
+      card-subtitle-color: var(--text),
+      card-subtitle-size: 1.1rem,
+      card-subtitle-space: 15px,
+      card-desc-color: var(--muted),
+      card-desc-size: 1rem,
+      card-desc-space: 15px,
+      card-badge-size: 1rem,
+      card-badge-space: 15px,
+      card-image-width: 100%,
+      card-image-height: 150px,
+      card-image-rounded: var(--rounded),
+    )
+  );
+
   background-color: var(--card-bg);
   color: var(--card-color);
   border-radius: var(--card-rounded);

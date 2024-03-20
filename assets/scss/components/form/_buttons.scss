@@ -1,22 +1,25 @@
 .btn {
-  --btn-bg: var(--primary);
-  --btn-bg-hover: var(--primary-hover);
-  --btn-color: #fff;
-  --btn-color-hover: #fff;
-  --btn-border-color: #ccc;
-  --btn-border-color-hover: #ccc;
-  --btn-border-style: solid;
-  --btn-padding: 10px 20px;
-  --btn-font-size: 14px;
-  --btn-rounded: 5px;
+  @include vars(
+    (
+      btn-bg: transparent,
+      btn-bg-hover: transparent,
+      btn-color: var(--text),
+      btn-color-hover: var(--muted),
+      btn-border-color: var(--border),
+      btn-border-color-hover: var(--border),
+      btn-border-style: solid,
+      btn-padding: 10px 20px,
+      btn-font-size: 14px,
+      btn-rounded: 5px,
+    )
+  );
   cursor: pointer;
-  border: none;
   outline: none;
   text-decoration: none;
   user-select: none;
   padding: var(--btn-padding);
   font-size: var(--btn-font-size);
-  font-weight: 600;
+  font-weight: 400;
   background-color: var(--btn-bg);
   color: var(--btn-color);
   border-radius: var(--btn-rounded);
@@ -33,18 +36,47 @@
   }
 }
 
+.btn-primary {
+  --btn-bg: var(--primary);
+  --btn-bg-hover: var(--primary-hover);
+  --btn-color: #fff;
+  --btn-color-hover: #fff;
+}
 .btn-success {
   --btn-bg: var(--success);
   --btn-bg-hover: var(--success-hover);
   --btn-color: #fff;
   --btn-color-hover: #fff;
 }
-
+.btn-warning {
+  --btn-bg: var(--warning);
+  --btn-bg-hover: var(--warning-hover);
+  --btn-color: #fff;
+  --btn-color-hover: #fff;
+}
+.btn-info {
+  --btn-bg: var(--info);
+  --btn-bg-hover: var(--info-hover);
+  --btn-color: #fff;
+  --btn-color-hover: #fff;
+}
 .btn-danger {
   --btn-bg: var(--danger);
   --btn-bg-hover: var(--danger-hover);
   --btn-color: #fff;
   --btn-color-hover: #fff;
+}
+.btn-dark {
+  --btn-bg: var(--dark);
+  --btn-bg-hover: var(--dark-hover);
+  --btn-color: #fff;
+  --btn-color-hover: #fff;
+}
+.btn-light {
+  --btn-bg: var(--light);
+  --btn-bg-hover: var(--light-hover);
+  --btn-color: var(--text);
+  --btn-color-hover: var(--muted);
 }
 
 .btn-block {
@@ -60,4 +92,21 @@
 .btn-lg {
   --btn-padding: 15px 25px;
   --btn-font-size: 16px;
+}
+
+.btn-close {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  margin-left: auto;
+  margin-top: -5px;
+  color: var(--text);
+  cursor: pointer;
+  &:hover {
+    background-color: var(--light);
+    color: var(--muted);
+  }
 }

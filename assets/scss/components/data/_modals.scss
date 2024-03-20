@@ -1,0 +1,79 @@
+.modal {
+  @include vars(
+    (
+      modal-head-space: 1rem,
+      modal-body-space: 1rem,
+      modal-foot-space: 1rem,
+      modal-width: 40%,
+      modal-overlay: var(--overlay),
+      modal-shadow: var(--shadow),
+      modal-margin: 2rem,
+    )
+  );
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: var(--modal-overlay);
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 9999;
+  display: none;
+
+  .modal-dialog {
+    position: relative;
+    margin: var(--modal-margin);
+    height: calc(100% - var(--modal-margin) * 2);
+    min-height: calc(100% - var(--modal-margin) * 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .modal-content {
+      background-color: var(--body);
+      box-shadow: var(--modal-shadow);
+      border-radius: var(--rounded);
+      max-height: 100%;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: var(--modal-width);
+
+      .modal-head {
+        padding: var(--modal-head-space);
+        display: flex;
+        align-items: center;
+
+        .modal-title {
+          font-weight: 500;
+          font-size: 1.2rem;
+        }
+      }
+
+      .modal-body {
+        padding: var(--modal-body-space);
+        overflow-y: auto;
+        height: 100%;
+      }
+
+      .modal-foot {
+        padding: var(--modal-foot-space);
+        display: flex;
+        justify-content: flex-end;
+
+        * {
+          margin-left: 0.4rem;
+        }
+      }
+    }
+  }
+
+  &.active {
+    transition: transform 0.3s ease-out;
+    display: block;
+  }
+}

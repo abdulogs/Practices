@@ -1,16 +1,20 @@
 .badge {
-  --badge-bg: var(--body);
-  --badge-bg-hover: var(--light);
-  --badge-border-style: solid;
-  --badge-border-width: 1px;
-  --badge-border-color: var(--border);
-  --badge-border-hover: var(--border);
-  --badge-color: var(--text);
-  --badge-color-hover: var(--text);
-  --badge-wgt: 400;
-  --badge-size: 12px;
-  --badge-padding: 2px 5px;
-  --badge-rounded: 50px;
+  @include vars(
+    (
+      badge-bg: var(--body),
+      badge-bg-hover: var(--light),
+      badge-border-style: solid,
+      badge-border-width: 1px,
+      badge-border-color: var(--border),
+      badge-border-hover: var(--border),
+      badge-color: var(--text),
+      badge-color-hover: var(--text),
+      badge-wgt: 400,
+      badge-size: 12px,
+      badge-padding: 2px 5px,
+      badge-rounded: 50px,
+    )
+  );
   text-decoration: none;
   display: inline-block;
   text-transform: uppercase;

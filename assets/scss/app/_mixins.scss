@@ -1,35 +1,42 @@
 @mixin utils($data) {
-  @each $size, $classes in $data {
+
+  @each $size,
+  $classes in $data {
     @if $size==default {
-      @each $class, $properties in $classes {
+
+      @each $class,
+      $properties in $classes {
         #{$class} {
-          @each $property, $value in $properties {
+
+          @each $property,
+          $value in $properties {
             #{$property}: $value;
           }
         }
       }
     }
 
-    $breakpointSize: if(
-      map-has-key($classes, size),
+    $breakpointSize: if(map-has-key($classes, size),
       map-get($classes, size),
-      screen-size($size)
-    );
+      screen-size($size));
 
-    $breakpointScale: if(
-      map-has-key($classes, scale),
+    $breakpointScale: if(map-has-key($classes, scale),
       map-get($classes, scale),
-      max-width
-    );
+      max-width);
 
-    $breakpointPrefix: if(map-has-key($classes, prefix), null, "-#{$size}");
+    $breakpointPrefix: if(map-has-key($classes, prefix), null, "#{$size}");
+
 
     @media ($breakpointScale: $breakpointSize) {
-      @if $size!=default {
-        @each $class, $properties in $classes {
-          @if $class != prefix or $class != scale $class != size {
-            #{$class}#{$breakpointPrefix} {
-              @each $property, $value in $properties {
+      @if $size !=default {
+
+        @each $class,
+        $properties in $classes {
+          @if $class !=prefix or $class !=scale $class !=size {
+            #{$class}\:#{$breakpointPrefix} {
+
+              @each $property,
+              $value in $properties {
                 #{$property}: $value;
               }
             }
@@ -37,5 +44,17 @@
         }
       }
     }
+  }
+}
+
+
+@mixin vars($data) {
+  $prefix: map-get($map: $config,
+      $key: prefix,
+    );
+
+  @each $key,
+  $value in $data {
+    --#{$prefix}#{$key}: #{$value};
   }
 }
