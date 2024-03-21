@@ -34,24 +34,27 @@ document.addEventListener("click", function (e) {
     active.classList.add("active");
     const attr = active.getAttribute("data-nxt-target");
     document.querySelector(attr).classList.add("active");
-  } else if (target.matches("[data-nxt-toggle='modal']")) {
+  } 
+  
+  else if (target.matches("[data-nxt-toggle='modal']")) {
     const attr = target.getAttribute("data-nxt-target");
     const selector = document.querySelector(attr);
     selector.classList.toggle("active");
-    !target.classList.contains("active")
-      ? (body.style.overflow = "hidden")
-      : null;
+    html.style.overflow = "hidden";
+    body.style.overflow = "hidden";
   } else if (target.matches(".modal-dialog")) {
     const modal = target.closest(".active");
     modal.classList.remove("active");
+    html.style.overflow = "auto";
     body.style.overflow = "auto";
-  } else if (target.matches("[data-nxt-toggle='offcanvas']")) {
+  }
+  
+  else if (target.matches("[data-nxt-toggle='offcanvas']")) {
     const attr = target.getAttribute("data-nxt-target");
     const selector = document.querySelector(attr);
     selector.classList.toggle("active");
-    !target.classList.contains("active")
-      ? (body.style.overflow = "hidden")
-      : null;
+    html.style.overflow = "hidden";
+    body.style.overflow = "hidden";
   } else if (target.matches(".offcanvas")) {
     target.classList.remove("active");
     body.style.overflow = "auto";
