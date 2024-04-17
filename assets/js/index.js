@@ -74,3 +74,4 @@ document.addEventListener("click", function (e) {
       .forEach((item) => item.classList.remove("active"));
   }
 });
+

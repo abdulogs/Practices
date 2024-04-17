@@ -1,18 +1,21 @@
 .btn {
-  @include vars(
-    (
-      btn-bg: transparent,
-      btn-bg-hover: transparent,
-      btn-color: var(--text),
-      btn-color-hover: var(--muted),
-      btn-border-color: var(--border),
-      btn-border-color-hover: var(--border),
-      btn-border-style: solid,
-      btn-padding: 10px 20px,
-      btn-font-size: 14px,
-      btn-rounded: 5px,
-    )
-  );
+  --btn-bg: transparent;
+  --btn-bg-hover: transparent;
+  --btn-bg-focus: transparent;
+  --btn-bg-disabled: transparent;
+  --btn-color: var(--text);
+  --btn-color-hover: var(--muted);
+  --btn-color-focus: var(--muted);
+  --btn-color-disabled: var(--muted);
+  --btn-border-color: var(--border);
+  --btn-border-color-hover: var(--border);
+  --btn-border-color-focus: var(--border);
+  --btn-border-color-disabled: var(--border);
+  --btn-border-style: solid;
+  --btn-padding: 10px 20px;
+  --btn-font-size: 14px;
+  --btn-rounded: 5px;
+  --btn-shadow: transparent;
   cursor: pointer;
   outline: none;
   text-decoration: none;
@@ -25,34 +28,54 @@
   border-radius: var(--btn-rounded);
   border: 1px var(--btn-border-style) var(--btn-border-color);
   transition: background 1s, color 0.5s, border 0.8s;
-  &:hover,
-  &:focus {
+
+  &:hover {
     background-color: var(--btn-bg-hover);
     color: var(--btn-color-hover);
+  }
+  &:focus {
+    background-color: var(--btn-bg-focus);
+    color: var(--btn-color-focus);
+    box-shadow: var(--body) 0px 0px 0px 2px,
+      rgba(var(--btn-shadow), 0.3) 0px 0px 0px 4px;
   }
   &:disabled {
-    background-color: var(--btn-bg-hover);
-    color: var(--btn-color-hover);
+    background-color: var(--btn-bg-disabled);
+    color: var(--btn-color-disabled);
   }
 }
-
 .btn-primary {
   --btn-bg: var(--primary);
   --btn-bg-hover: var(--primary-hover);
+  --btn-bg-focus: var(--primary-hover);
+  --btn-bg-disabled: var(--primary-hover);
   --btn-color: #fff;
   --btn-color-hover: #fff;
+  --btn-color-focus: #fff;
+  --btn-color-disabled: #fff;
+  --btn-shadow: var(--primary-rgb);
 }
 .btn-success {
   --btn-bg: var(--success);
   --btn-bg-hover: var(--success-hover);
+  --btn-bg-focus: var(--success-hover);
+  --btn-bg-disabled: var(--success-hover);
   --btn-color: #fff;
   --btn-color-hover: #fff;
+  --btn-color-focus: #fff;
+  --btn-color-disabled: #fff;
+  --btn-shadow: var(--success-rgb);
 }
 .btn-warning {
   --btn-bg: var(--warning);
   --btn-bg-hover: var(--warning-hover);
+  --btn-bg-focus: var(--warning-hover);
+  --btn-bg-disabled: var(--warning-hover);
   --btn-color: #fff;
   --btn-color-hover: #fff;
+  --btn-color-focus: #fff;
+  --btn-color-disabled: #fff;
+  --btn-shadow: var(--warning-rgb);
 }
 .btn-info {
   --btn-bg: var(--info);
